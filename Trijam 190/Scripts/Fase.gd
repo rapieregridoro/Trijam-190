@@ -36,11 +36,11 @@ func derrota():
 
 func Spawn():
 	randomize()
-	var spawn_point = polar2cartesian(500, deg2rad(randi()%370))
+	var spawn_point = polar2cartesian(500+randi()%100, deg2rad(randi()%370))
 	
 	var enemego = Inimigo.instance()
 	enemego.position = spawn_point
 	
 	add_child(enemego)
 	
-	pass
+	

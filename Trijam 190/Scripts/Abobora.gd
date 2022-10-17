@@ -11,8 +11,11 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Vida <= 0:
-		destruida = true
-		Global.aboboras.erase(self)
-		Global.emit_signal("abobora_destruida")
-		queue_free()
+		if !destruida:
+			Global.aboboras.erase(self)
+			Global.emit_signal("abobora_destruida")
+			$Sprite.frame = 1
+			$StaticBody2D/CollisionShape2D.disabled = true
+			destruida = true
+		
 	

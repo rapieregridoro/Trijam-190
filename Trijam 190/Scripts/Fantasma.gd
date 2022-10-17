@@ -4,6 +4,8 @@ extends KinematicBody2D
 var fugir_de := Vector2.ZERO
 var Tempo:float = 10
 
+var vel_fant = 25
+
 func _ready() -> void:
 	
 	pass
@@ -11,7 +13,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	fugir_de = Global.Player.global_position - position
 	
-	move_and_slide(-fugir_de.normalized()* 25)
+	move_and_slide(-fugir_de.normalized() * vel_fant)
 	Tempo -= delta
 	if Tempo < 0:
 		var Ini = load("res://Scenes/Inimigo.tscn")

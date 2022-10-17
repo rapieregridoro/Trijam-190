@@ -3,6 +3,8 @@ extends KinematicBody2D
 var alvos := []
 var alvo_atual := Vector2.ZERO
 
+var vel_enemy = 30
+
 func _ready() -> void:
 	
 	achar_alvo()
@@ -11,8 +13,9 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
-	move_and_slide((alvo_atual - position).normalized() * 30)
+	move_and_slide((alvo_atual - position).normalized() * vel_enemy)
 	
+	$AnimatedSprite.flip_h = (alvo_atual - position).x < 0
 
 func achar_alvo():
 	randomize()
