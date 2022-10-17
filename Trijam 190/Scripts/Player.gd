@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var dir : Vector2 = Vector2.ZERO
-var vel : int = 2
+var vel : int = 50
 
 var mira : Vector2
 var largura : int = 200
@@ -12,7 +12,8 @@ var vel_arma = 0.5
 
 
 func _ready() -> void:
-	pass 
+	Global.Player = self
+	
 
 func _physics_process(delta: float) -> void:
 	
@@ -26,7 +27,7 @@ func _physics_process(delta: float) -> void:
 func Movement():
 	dir.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	dir.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
-	move_and_collide(dir * vel)
+	move_and_slide(dir * vel)
 	
 
 func Atira():

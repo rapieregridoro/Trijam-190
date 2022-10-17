@@ -17,6 +17,7 @@ func physics_process(delta: float) -> void:
 
 func _on_Tween_tween_all_completed() -> void:
 	$Coleta/CollisionShape2D.disabled = false
+	$Dano/CollisionShape2D.disabled = true
 	Global.Can_Teleport = true
 	Global.point_of_tp = ponto_final
 	
@@ -24,5 +25,6 @@ func _on_Tween_tween_all_completed() -> void:
 
 func _on_Coleta_body_entered(body: Node) -> void:
 	Global.Com_Arma = true
+	Global.Can_Teleport = false
 	queue_free()
 	
