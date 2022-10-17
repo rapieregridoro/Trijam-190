@@ -1,0 +1,38 @@
+[gd_scene format=2]
+
+[node name="Fase" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 83.0
+margin_top = 131.0
+margin_right = 123.0
+margin_bottom = 171.0
+color = Color( 0.498039, 0.788235, 0.670588, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -224.0
+margin_top = -71.0
+margin_right = -184.0
+margin_bottom = -31.0
+color = Color( 0.498039, 0.788235, 0.670588, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 133.0
+margin_top = -76.0
+margin_right = 173.0
+margin_bottom = -36.0
+color = Color( 0.498039, 0.788235, 0.670588, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = -252.0
+margin_top = 129.0
+margin_right = -212.0
+margin_bottom = 169.0
+color = Color( 0.498039, 0.788235, 0.670588, 1 )
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_left = -48.0
+margin_top = -221.0
+margin_right = -8.0
+margin_bottom = -181.0
+color = Color( 0.498039, 0.788235, 0.670588, 1 )
